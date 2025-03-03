@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  place-items: center;
+  text-align: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.containerMain {
+  width: 1800px;
+  height: 800px;
+  margin: 55px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.222);
+}
+
+.containerSearch {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.formSearch {
+  display: flex;
+  padding: 100px;
+  gap: 500px;
+}
+
+.searchInput {
+  width: 600px;
+  height: 50px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.65);
+  border: none;
+}
+
+.btn-config {
+  width: 65px;
+  height: 65px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  opacity: 0.8;
+  border: none;
+}
+
+.btn-config img {
+  width: 85%;
+  height: 80%;
+  color: white;
+  filter: invert(1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn-config:hover {
+  transform: translateY(-5px);
+}
+
+.containerWeather {
+  display: block;
+}
+
+.locale {
+  margin-right: 1000px;
+  margin-bottom: 50px;
+}
+
+.localeInfo {
+  font-size: 70px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.temperatureInfo {
+  font-size: 55px;
+  font-weight: 500;
+  margin-right: 160px;
+}
+
+.containerForecast {
+  display: flex;
+  gap: 45px;
+  margin-left: 120px;
+}
+
+.forecast {
+  background: rgba(0, 0, 0, 0.75);
+  width: 280px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.forecast img {
+  width: 20%;
+  height: 25%;
+  margin-top: 10px;
+}
+
+.forecast li {
+  margin-top: 5px;
+}
