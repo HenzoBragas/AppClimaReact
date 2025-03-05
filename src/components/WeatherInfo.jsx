@@ -3,7 +3,12 @@ import Windy from "../assets/ventoso.png";
 import Rain from "../assets/trovoada.png";
 import Sun from "../assets/sun.png";
 
+import { useHour } from "../hooks/useHour";
+
+
 function WeatherInfo() {
+    const { time } = useHour();
+
     return (
         <div className="containerWeather">
             <div className="infoWeather">
@@ -12,7 +17,7 @@ function WeatherInfo() {
                     <li className="temperatureInfo">35°C</li>
                 </div>
                 <div className="hour">
-                        <li>19:25</li>
+                        <li>{time}</li>
                     </div>
             </div>
             <div className="containerForecast">

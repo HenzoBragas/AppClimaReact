@@ -20,7 +20,6 @@ body {
 }
 .infoWeather {
   display: flex;
-  border: 1px solid red;
   width: 1700px;
   margin-left: 200px;
 }
