@@ -7,7 +7,7 @@ function SearchBar() {
     return (
         <div className="containerSearch">
             <form className="formSearch">
-                <input type="text" className="searchInput"/>
+                <input type="text" className="searchInput"  />
                 <div className="btn-actions">
                     <button className="btn-config btnSearch"><img src={Search} alt="" /></button>
                     <button className="btn-config btnFavorites"><img src={Star} alt="" /></button>

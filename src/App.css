@@ -18,6 +18,20 @@ body {
   border-radius: 25px;
   background: rgba(0, 0, 0, 0.222);
 }
+.infoWeather {
+  display: flex;
+  border: 1px solid red;
+  width: 1700px;
+  margin-left: 200px;
+}
+.hour {
+  font-size: 80px;
+  align-self: center;
+}
+.hour li {
+  position: relative;
+  right: 300px;
+}
 
 .containerSearch {
   display: flex;
@@ -103,4 +117,63 @@ body {
 
 .forecast li {
   margin-top: 5px;
+}
+
+@media screen and (max-width: 1566px) {
+  .containerMain {
+    width: 1345px;
+    height: 650px;
+    margin: 55px;
+  }
+  .infoWeather {
+    border: 1px solid red;
+    width: 90%;
+    margin-left: 130px;
+    position: relative;
+    bottom: 30px;
+  }
+  .hour li {
+    font-size: 50px;
+    position: relative;
+    right: 150px;
+  }
+  .formSearch {
+    gap: 80px;
+    height: 5px;
+    position: relative;
+    bottom: 45px;
+  }
+  .searchInput {
+    width: 540px;
+    height: 50px;
+    margin-right: 200px;
+  }
+  .btn-config {
+    width: 45px;
+    height: 45px;
+  }
+  .locale {
+    margin-right: 700px;
+    margin-bottom: 20px;
+  }
+  .localeInfo {
+    font-size: 60px;
+    letter-spacing: 2px;
+  }
+
+  .temperatureInfo {
+    font-size: 50px;
+    margin-right: 160px;
+    margin-bottom: 50px;
+  }
+
+  .containerForecast {
+    gap: 35px;
+    margin-left: 30px;
+  }
+
+  .forecast {
+    width: 230px;
+    height: 195px;
+  }
 }

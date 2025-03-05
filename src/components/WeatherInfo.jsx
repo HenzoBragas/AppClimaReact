@@ -11,6 +11,9 @@ function WeatherInfo() {
                     <li className='localeInfo'>São Paulo</li>
                     <li className="temperatureInfo">35°C</li>
                 </div>
+                <div className="hour">
+                        <li>19:25</li>
+                    </div>
             </div>
             <div className="containerForecast">
                 <div className="forecast">
