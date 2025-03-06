@@ -48,9 +48,12 @@ body {
   width: 600px;
   height: 50px;
   border-radius: 25px;
+  font-size: 30px;
+  padding-left: 30px;
   background: rgba(0, 0, 0, 0.65);
   border: none;
 }
+
 
 .btn-config {
   width: 65px;
@@ -125,7 +128,6 @@ body {
     margin: 55px;
   }
   .infoWeather {
-    border: 1px solid red;
     width: 90%;
     margin-left: 130px;
     position: relative;
