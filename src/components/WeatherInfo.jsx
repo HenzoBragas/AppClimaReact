@@ -4,26 +4,19 @@ import Rain from "../assets/trovoada.png";
 import Sun from "../assets/sun.png";
 
 import { useHour } from "../hooks/useHour";
-import { useSearch } from "../hooks/useSearch";
+import { useWeather } from "../hooks/useWeather";
 
 function WeatherInfo() {
-    const { weather } = useSearch();
 
+    const { weather } = useWeather();
     const { time } = useHour();
 
     return (
         <div className="containerWeather">
             <div className="infoWeather">
                 <div className="locale">
-                    {weather ? (
-                        <>
-                            <li className='localeInfo'>{weather.name}</li>
-                            <li className="temperatureInfo">{Math.round(weather.main.temp)}°C</li>
-                        </>
-                    ) : (
-                        <li className='localeInfo'>Pesquisa sua cidade</li>
-                    )
-                    }
+                    <li className='localeInfo'>{weather?.name || "Pesquise sua Cidade"}</li>
+                    <li className="temperatureInfo">{Math.round(weather?.main.temp) || null}</li>
                 </div>
                 <div className="hour">
                     <li>{time}</li>
