@@ -16,7 +16,8 @@ function WeatherInfo() {
             <div className="infoWeather">
                 <div className="locale">
                     <li className='localeInfo'>{weather?.name || "Pesquise sua Cidade"}</li>
-                    <li className="temperatureInfo">{Math.round(weather?.main.temp) || null}</li>
+                    <li className="temperatureInfo">{weather?.main?.temp ? `${Math.round(weather.main.temp)}°C` : null}</li>
+
                 </div>
                 <div className="hour">
                     <li>{time}</li>

@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import axios from "axios";
 
-export const useWeather = () => {
+const WeatherContext = createContext();
+
+export const WeatherProvider = ({ children }) => {  
     const [search, setSearch] = useState("");
     const [weather, setWeather] = useState(null);
 
     const apiKey = "11cec438afc6b33ba694be90048054dd";
-
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,7 +23,6 @@ export const useWeather = () => {
             const { data } = await axios.get(url);
             setWeather(data);
             console.log(data);
-
         } catch (error) {
             console.error(error);
         }
@@ -31,11 +30,12 @@ export const useWeather = () => {
         setSearch("");
     };
 
-    useEffect(() => {
-        console.log(weather?.name)
-        console.log(Math.round(weather?.main.temp))
-    }, [weather])
-
-
-    return { search, setSearch, handleSubmit, weather};
+    return (
+        <WeatherContext.Provider value={{ search, setSearch, handleSubmit, weather }}>
+            {children}
+        </WeatherContext.Provider>
+    );
 };
+
+
+export const useWeather = () => useContext(WeatherContext);
